@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "pandas>=2.3.0",
-    "pyspark>=4.0.0",
+    "pip>=25.1.1",
+    "pyspark==3.5.6",
     "requests>=2.32.4",
 ]
