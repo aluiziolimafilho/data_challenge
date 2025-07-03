@@ -1,0 +1,17 @@
+name: challenge
+services:
+  db:
+    image: postgres:16
+    ports:
+      - "2347:5432"
+    environment:
+      - POSTGRES_USER=challenge
+      - POSTGRES_PASSWORD=challenge
+      - POSTGRES_DB=challenge_db
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./data:/datasource
+      # - ./scripts:/docker-entrypoint-initdb.d/
+volumes:
+  db_data:
+    name: challenge_data
